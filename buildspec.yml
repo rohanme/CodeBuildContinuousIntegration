@@ -15,7 +15,7 @@ phases:
     commands:
       - echo Entering build phase...
       - echo Build started on `date`
-      - mvn install
+      - maven clean install -DproxySet=true -DproxyHost=10.0.0.106 -DproxyPort=3128
   post_build:
     commands:
       - echo Entering post_build phase...
